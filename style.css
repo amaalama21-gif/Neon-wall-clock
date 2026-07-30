@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-  background: linear-gradient(135deg, #ff00ff, #ff1493, #da00ff);
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #ff1493, #00ff88, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
   font-family: 'Orbitron', sans-serif;
   display: flex;
   justify-content: center;
@@ -11,66 +9,8 @@ body {
   height: 100vh;
 }
 
-.container {
-  background: rgba(50, 0, 50, 0.6);
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
-  border: 2px solid #00ffff;
-}
-
-h1 {
-  color: #00ffff;
-  font-size: 2rem;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-  margin-bottom: 20px;
-}
-
-#time {
-  color: #00ffff;
-  font-size: 4rem;
-  font-weight: 900;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  letter-spacing: 3px;
-}
-
-#date {
-  color: white;
-  font-size: 1rem;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-
-.alarm-section h3 {
-  color: white;
-  margin-bottom: 10px;
-}
-
-.alarm-section input {
-  background: #1a001a;
-  border: 2px solid #00ffff;
-  color: #00ffff;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #00ffff;
-}
-
-.alarm-section button {
-  background: #00ffff;
-  color: #1a001a;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00ffff;
-  margin-left: 10px;
-}
-
-#alarmStatus {
-  color: #00ffff;
-  margin-top: 15px;
-  text-shadow: 0 0 5px #00ffff;
+@keyframes gradientBG {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
 }
