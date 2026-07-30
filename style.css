@@ -1,1 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ANIMATED NEON BACKGROUND */
+.bg-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  opacity: 0.3;
+  filter: blur(80px);
+}
+
+@keyframes gradientShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NEON CLOCK */
+.clock-container {
+  text-align: center;
+  z-index: 10;
+}
+
+#time {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff,
+    0 0 80px #00ffff;
+  animation: neonFlicker 2s infinite alternate;
+}
+
+#date {
+  font-size: 2rem;
+  color: #ff00ff;
+  margin-top: 20px;
+  text-shadow: 
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff;
+}
+
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #time { font-size: 4rem; }
+  #date { font-size: 1.2rem; }
+}
