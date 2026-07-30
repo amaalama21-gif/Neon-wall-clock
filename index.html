@@ -3,48 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Alarm Clock</title>
+<title>Alarm Clock</title>
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="clock">
-    <div id="time">00:00:00</div>
-    <div id="date">Loading...</div>
-  </div>
+  <div class="container">
+    <h1>NEON CLOCK</h1>
+    <div id="time">1:12:22 AM</div>
+    <div id="date">Fri Jul 31 2026</div>
 
-  <div class="alarm-box">
-    <h3>Set Alarm</h3>
-    <input type="time" id="alarmTime">
-    <button onclick="setAlarm()">Set</button>
-    <p id="alarmStatus">No alarm set</p>
+    <div class="alarm-section">
+      <h3>Set Alarm</h3>
+      <input type="time" id="alarmTime">
+      <button onclick="setAlarm()">SET ALARM</button>
+      <p id="alarmStatus">No alarm set</p>
+    </div>
   </div>
 
   <audio id="alarmSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"></audio>
-
-<script>
-function updateClock() {
-  const now = new Date();
-  document.getElementById('time').innerText = now.toLocaleTimeString('en-US', {hour12: false});
-  document.getElementById('date').innerText = now.toDateString();
-  
-  const alarm = localStorage.getItem('alarm');
-  if(alarm) {
-    const [h,m] = alarm.split(':');
-    if(now.getHours() == h && now.getMinutes() == m && now.getSeconds() == 0) {
-      document.getElementById('alarmSound').play();
-      alert('⏰ ALARM!');
-    }
-  }
-}
-setInterval(updateClock, 1000);
-updateClock();
-
-function setAlarm() {
-  const val = document.getElementById('alarmTime').value;
-  localStorage.setItem('alarm', val);
-  document.getElementById('alarmStatus').innerText = 'Alarm set for: ' + val;
-}
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
