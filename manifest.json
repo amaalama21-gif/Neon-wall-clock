@@ -1,10 +1,10 @@
 {
   "name": "Neon Wall Clock",
   "short_name": "Neon Clock",
-  "description": "Stylish neon glowing digital wall clock with alarm",
-  "start_url": "./",
+  "description": "Neon glowing digital clock with loud alarm",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#000",
+  "background_color": "#0a0a0a",
   "theme_color": "#00ffff",
   "orientation": "landscape",
   "icons": [
