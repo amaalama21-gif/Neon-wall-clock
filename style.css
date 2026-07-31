@@ -33,10 +33,10 @@ h1 {
 }
 
 #time {
-  color: #00ffff;
-  font-size: 6rem;  /* BIG NUMBERS */
+  color: #ffffff;  /* WHITE INSTEAD OF BLUE */
+  font-size: 6rem;  
   font-weight: 900;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* WHITE + SOFT CYAN GLOW */
   letter-spacing: 5px;
   line-height: 1;
   margin: 20px 0;
